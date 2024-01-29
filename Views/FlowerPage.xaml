@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp2.Views.FlowerPage"
+             Title="Flower Page">
+    <VerticalStackLayout Spacing="15">
+        <Label 
+            Text="Welcome to FlowersApp!"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" 
+            />
+        <ListView
+            x:Name="FlowerListView"
+            BackgroundColor="LightGray"
+            RowHeight="60"
+            >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell
+                        Text="{Binding Name}"
+                        Detail="{Binding Signature}"
+                        >
+                        
+                    </TextCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button 
+            x:Name="BtnAddFlower"
+            Clicked="BtnAddFlower_Clicked"
+            Text="Add Flower"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" 
+            />
+        <Button
+            x:Name="BtnEditFlower"
+            Clicked="BtnEditFlower_Clicked"
+            Text="Edit Flower"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" 
+            />
+        
+    </VerticalStackLayout>
+</ContentPage>

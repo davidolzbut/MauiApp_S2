@@ -15,18 +15,13 @@ public partial class FlowerPage : ContentPage
     {
         Shell.Current.GoToAsync(nameof(AddFlowerPage));
     }
-
-    private void BtnEditFlower_Clicked(object sender, EventArgs e)
-    {
-        Shell.Current.GoToAsync(nameof(EditFlowerPage));
-    }
-
+    
     private async void FlowerListView_OnItemSelected(object sender, SelectedItemChangedEventArgs e)
     {
         if (FlowerListView.SelectedItem != null)
         {
            // await Shell.Current.GoToAsync(nameof(DetailFlowerPage)); 
-           await Shell.Current.GoToAsync($"{nameof(DetailFlowerPage)}?Id={((Flower)FlowerListView.SelectedItem).Id}"); 
+           await Shell.Current.GoToAsync($"{nameof(DetailFlowerPage)}?Id={((Flower)FlowerListView.SelectedItem).FlowerId}"); 
         }
         
     }

@@ -5,13 +5,40 @@
              x:Class="MauiApp2.Views.DetailFlowerPage"
              Title="Detail Flower Page">
     <ContentPage.Content>
-        <VerticalStackLayout>
+        <VerticalStackLayout
+            Spacing="100">
             <Label 
                 x:Name = "NameLabel"
                 FontSize="24"
-                Text=""
+                Text="default"
                 VerticalOptions="Center" 
                 HorizontalOptions="Center" />
+            
+            <Label
+                x:Name="SignatureLabel"
+                FontSize="16"
+                TextColor="DarkGray"
+                />
+            <HorizontalStackLayout
+                HorizontalOptions="Center"
+                Spacing="100">
+                <Button
+                    x:Name="BtnEditFlower"
+                    Clicked="BtnEditFlower_Clicked"
+                    Text="Edit"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center" 
+                />
+                <Button
+                    x:Name="BtnDeleteFlower"
+                    Clicked="BtnDeleteFlower_OnClicked"
+                    Text="Delete"
+                    BackgroundColor="Red"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center" 
+                />
+                
+            </HorizontalStackLayout>
         </VerticalStackLayout>
     </ContentPage.Content>
 </ContentPage>

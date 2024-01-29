@@ -36,13 +36,7 @@
             VerticalOptions="Center" 
             HorizontalOptions="Center" 
             />
-        <Button
-            x:Name="BtnEditFlower"
-            Clicked="BtnEditFlower_Clicked"
-            Text="Edit Flower"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" 
-            />
+        
         
     </VerticalStackLayout>
 </ContentPage>

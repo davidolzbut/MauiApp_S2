@@ -7,7 +7,7 @@ using MauiApp2.Models;
 
 namespace MauiApp2.Views;
 
-[QueryProperty(nameof(Id), "Id")]
+[QueryProperty(nameof(FlowerId), "Id")]
 public partial class DetailFlowerPage : ContentPage
 {
     private Flower _flower;
@@ -18,6 +18,7 @@ public partial class DetailFlowerPage : ContentPage
         {
             _flower = FlowerRepository.GetFlowerById(int.Parse(value));
             NameLabel.Text = _flower.Name;
+            SignatureLabel.Text = _flower.Signature;
         }
     }
     
@@ -25,5 +26,12 @@ public partial class DetailFlowerPage : ContentPage
     {
         InitializeComponent();
     }
-    
+    private void BtnEditFlower_Clicked(object sender, EventArgs e)
+    {
+        Shell.Current.GoToAsync(nameof(EditFlowerPage));
+    }
+    private void BtnDeleteFlower_OnClicked(object sender, EventArgs e)
+    {
+        // throw new NotImplementedException();
+    }
 }

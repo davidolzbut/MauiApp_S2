@@ -8,7 +8,7 @@ namespace MauiApp2.Models
 {
     public class Flower
     {
-        public int Id { get; set; }
+        public int FlowerId { get; set; }
         public string Name { get; set; }
         public string Signature { get; set; }
 
@@ -20,7 +20,7 @@ namespace MauiApp2.Models
         }
         public Flower(int id, string name, string signature)
         {
-            Id = id;
+            FlowerId = id;
             Name = name;
             Signature = signature;
         }

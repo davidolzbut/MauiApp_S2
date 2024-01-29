@@ -18,7 +18,7 @@ public static class FlowerRepository
 
     public static Flower GetFlowerById(int flowerId)
     {
-        return _flowers.FirstOrDefault(x => x.Id == flowerId);
+        return _flowers.FirstOrDefault(x => x.FlowerId == flowerId);
     }
     
 }

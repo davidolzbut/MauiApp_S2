@@ -11,6 +11,7 @@ namespace MauiApp2
             Routing.RegisterRoute(nameof(FlowerPage), typeof(FlowerPage));
             Routing.RegisterRoute(nameof(AddFlowerPage), typeof(AddFlowerPage));
             Routing.RegisterRoute(nameof(EditFlowerPage), typeof(EditFlowerPage));
+            Routing.RegisterRoute(nameof(DetailFlowerPage), typeof(DetailFlowerPage));
         }
     }
 }

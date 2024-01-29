@@ -12,7 +12,11 @@
         <ListView
             x:Name="FlowerListView"
             BackgroundColor="LightGray"
+            SeparatorColor="Black"
             RowHeight="60"
+            
+            ItemSelected="FlowerListView_OnItemSelected"
+            ItemTapped="FlowerListView_OnItemTapped"
             >
             <ListView.ItemTemplate>
                 <DataTemplate>
